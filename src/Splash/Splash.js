@@ -4,7 +4,26 @@ import './Splash.css';
 
 export default class Splash extends React.Component {
 
+
+  facts = [
+    "A tree can absorb 1 tonne of carbon dioxide by the time it is 40 years old",
+    "Trees can save you up to 25% on your energy bills; they provide shade in the summer, and serve as a windbreak in the winter",
+    "Getting hot in here? Trees help to lower the temperature on your street",
+    "Love trees. They are amazing",
+  ]
+
+
+  getRandomInt = (max) => {
+    return Math.floor(Math.random() * Math.floor(max));
+  }
+
   render() {
+
+
+    const index = this.getRandomInt(this.facts.length);
+
+    const fact = this.facts[index];
+
     return (
       <div className="splash-content">
         <svg id="planet" x="0" y="0" width="80%" viewBox="0 0 595.28 582.14">
@@ -49,8 +68,9 @@ export default class Splash extends React.Component {
         </svg>
 
         <div className="facts">
-          change me later
-          Monarch butterflies have been tracked soaring high to make use of strong tailwinds on their long-distance migration
+          {
+            fact
+          }
         </div>
 
         <svg id="trees_container" x="0" y="0" width="100%" viewBox="0 0 1055.99 485.78">
