@@ -48,6 +48,10 @@ export default class Splash extends React.Component {
           </g>
         </svg>
 
+        <div className="facts">
+          change me later
+          Monarch butterflies have been tracked soaring high to make use of strong tailwinds on their long-distance migration
+        </div>
 
         <svg id="trees_container" x="0" y="0" width="100%" viewBox="0 0 1055.99 485.78">
           <defs>

@@ -25,6 +25,16 @@ h3.instructions {
   overflow: hidden;
 }
 
+
+
+.facts{
+  margin-top: 7%;
+  font-size: 2em;
+  padding: 8%;
+  font-family: sans-serif;
+  color: white;
+}
+
 #trees_container {
   position: absolute;
   left: 0;
