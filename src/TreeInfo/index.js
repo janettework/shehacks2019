@@ -16,7 +16,7 @@ export default class TreeInfo extends Component {
     const name = "Justin TIMBERlake"
 
     return (
-      <Pane display="flex" padding={16} flexDirection="column">
+      <Pane display="flex" padding={14} flexDirection="column">
         <Header name={name} onClose={this.props.onClose} />
         <TreeBar />
 
