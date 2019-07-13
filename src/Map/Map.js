@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import L from 'leaflet'
-import { Map as LeafletMap, TileLayer, Marker } from 'react-leaflet'
+import { Map as LeafletMap, TileLayer, Marker, withLeaflet } from 'react-leaflet'
 import Markers from './Markers'
+import Search from './Search'
 import TreeInfo from '../TreeInfo'
 import './Map.css';
 
@@ -37,6 +38,7 @@ class Map extends Component {
     const position = [this.state.lat, this.state.lng];
     return (
       this.state.showMap ? <LeafletMap center={position} zoom={this.state.zoom}>
+        <Search />
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url='https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png'
