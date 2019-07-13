@@ -3,7 +3,10 @@ import L from 'leaflet'
 import { Map as LeafletMap, TileLayer, Marker } from 'react-leaflet'
 import Markers from './Markers'
 import TreeInfo from '../TreeInfo'
+import Menu from '../Menu'
 import './Map.css';
+
+import { Pane } from 'evergreen-ui'
 
 class Map extends Component {
   constructor() {
@@ -13,7 +16,7 @@ class Map extends Component {
       lat: -33.883006,
       lng: 151.206536,
       zoom: 15,
-      showMap: false,
+      showMap: true,
     }
   }
 
@@ -35,8 +38,9 @@ class Map extends Component {
 
   render() {
     const position = [this.state.lat, this.state.lng];
-    return (
-      this.state.showMap ? <LeafletMap center={position} zoom={this.state.zoom}>
+    return (<Pane>
+      <Menu />
+      {this.state.showMap ? <LeafletMap center={position} zoom={this.state.zoom}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url='https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png'
@@ -58,7 +62,9 @@ class Map extends Component {
         <Marker position={Markers.markerPos14} onClick={this.handleClick} icon={this.treeIcon} />
         <Marker position={Markers.markerPos15} onClick={this.handleClick} icon={this.treeIcon} />
         <Marker position={Markers.markerPos16} onClick={this.handleClick} icon={this.treeIcon} />
-      </LeafletMap> : <TreeInfo onClose={this.handleClose} />
+      </LeafletMap> : <TreeInfo onClose={this.handleClose} />}
+
+    </Pane>
     );
   }
 }
