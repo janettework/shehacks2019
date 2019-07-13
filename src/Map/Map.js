@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import L from 'leaflet'
 import { Map as LeafletMap, TileLayer, Marker } from 'react-leaflet'
 import Markers from './Markers'
+import TreeInfo from '../TreeInfo'
 import './Map.css';
 
 class Map extends Component {
@@ -9,15 +10,22 @@ class Map extends Component {
     super()
     // Central Station
     this.state = {
-    lat: -33.883006,
+      lat: -33.883006,
       lng: 151.206536,
-      zoom: 15
+      zoom: 15,
+      showMap: true,
     }
   }
 
   handleClick = event => {
     const { lat, lng } = event.latlng
     console.log(`Clicked at ${lat}, ${lng}`)
+
+    this.setState({ showMap: false })
+  }
+
+  handleClose = () => {
+    this.setState({ showMap: true })
   }
 
   treeIcon = L.icon({
@@ -29,7 +37,7 @@ class Map extends Component {
   render() {
     const position = [this.state.lat, this.state.lng];
     return (
-      <LeafletMap center={position} zoom={this.state.zoom}>
+      this.state.showMap ? <LeafletMap center={position} zoom={this.state.zoom}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
@@ -45,7 +53,7 @@ class Map extends Component {
         <Marker position={Markers.markerPos9} onClick={this.handleClick} icon={this.treeIcon} />
         <Marker position={Markers.markerPos10} onClick={this.handleClick} icon={this.treeIcon} />
         <Marker position={Markers.markerPos11} onClick={this.handleClick} icon={this.treeIcon} />
-      </LeafletMap>
+      </LeafletMap> : <TreeInfo onClose={this.handleClose} />
     );
   }
 }

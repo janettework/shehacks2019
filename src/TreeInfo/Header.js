@@ -13,7 +13,7 @@ export default class Header extends Component {
       <Pane display="flex" flexDirection="column">
 
         <Pane display="flex" flexDirection="column">
-          <Button marginBottom={12} iconBefore="arrow-left" width={80}>Back</Button>
+          <Button marginBottom={12} iconBefore="arrow-left" width={80} onClick={this.props.onClose}>Back</Button>
         </Pane>
 
         <Pane display="flex" flexDirection="column" marginVertical={20}>
