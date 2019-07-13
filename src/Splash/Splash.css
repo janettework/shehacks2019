@@ -22,7 +22,6 @@ h3.instructions {
   background: radial-gradient(ellipse at center, rgba(150,225,230,1) 0%, rgba(0,182,199,1) 100%);
   font-family: "Quicksand";
   position: absolute;
-  overflow: hidden;
 }
 
 
@@ -39,7 +38,8 @@ h3.instructions {
   position: absolute;
   left: 0;
   bottom: 0;
-  z-index: 0;
+  overflow: overlay;
+  z-index: 10;
 }
 #planet {
   position: absolute;
@@ -47,11 +47,11 @@ h3.instructions {
   bottom: 0;
   max-width: 500px;
   transform-origin: center;
-  animation: bounce 1s alternate infinite;
+  animation: bounce 3s alternate infinite;
 }
 
 #trees path {
-  animation: shake 3s linear infinite alternate;
+  animation: grow 4s;
   transform-origin: bottom;
 }
 
@@ -60,8 +60,8 @@ h3.instructions {
   to   { bottom: 50%; }
 }
 
-@keyframes shake {
-  0% {transform: rotate(-2deg)}
-  50% {transform: rotate(0deg)}
-  100% {transform: rotate(2deg)}
+@keyframes grow {
+  0% {transform: scale(1, 1)}
+  50% {transform: scale(1, 1.2)}
+  100% {transform: scale(1, 1.5)}
 }
