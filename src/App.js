@@ -15,7 +15,7 @@ export default class App extends React.Component {
 
     setTimeout(() => {
       this.setState({ loading: false })
-    }, 3000)
+    }, 4000)
   }
 
 

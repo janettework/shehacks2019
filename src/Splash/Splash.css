@@ -5,19 +5,21 @@
   margin:0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse at center, rgba(150,225,230,1) 0%, rgba(0,182,199,1) 100%);
+  /* background: radial-gradient(ellipse at center, rgba(150,225,230,1) 0%, rgba(0,182,199,1) 100%); */
   font-family: "Quicksand";
   position: absolute;
 }
 
+.spinner {
+  margin-top: 40px;
 
+}
 
 .facts{
-  margin-top: 7%;
+  margin-top: 200px;
   font-size: 2em;
   padding: 8%;
   font-family: sans-serif;
-  color: white;
 }
 
 #trees_container {
@@ -27,17 +29,10 @@
   overflow: overlay;
   z-index: 10;
 }
-#planet {
-  position: absolute;
-  left: 22%;
-  bottom: 0;
-  max-width: 500px;
-  transform-origin: center;
-  animation: bounce 3s alternate infinite;
-}
+
 
 #trees path {
-  animation: grow 4s;
+  animation: grow 4s ease-in;
   transform-origin: bottom;
 }
 
@@ -48,6 +43,5 @@
 
 @keyframes grow {
   0% {transform: scale(1, 1)}
-  50% {transform: scale(1, 1.2)}
-  100% {transform: scale(1, 1.5)}
+  100% {transform: scale(1, 1.6)}
 }
