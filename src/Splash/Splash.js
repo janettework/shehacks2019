@@ -1,5 +1,6 @@
 import React from 'react';
 import './Splash.css';
+import {Heading} from "evergreen-ui";
 
 
 export default class Splash extends React.Component {
@@ -27,9 +28,12 @@ export default class Splash extends React.Component {
     return (
       <div className="splash-content">
         <div className="facts bounce">
-          {
-            fact
-          }
+          <Heading size={800} marginTop="default">
+            {
+              fact
+            }
+          </Heading>
+
         </div>
 
         <div>
