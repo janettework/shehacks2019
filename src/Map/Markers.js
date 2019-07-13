@@ -94,4 +94,22 @@ export default {
     lat: -33.875430,
     lng: 151.201578,
   },
+
+  // Hyde Park 3
+  markerPos17 : {
+    lat: -33.870491,
+    lng: 151.210826,
+  },
+
+  // Hyde Park 4
+  markerPos18 : {
+    lat: -33.872264,
+    lng: 151.211716,
+  },
+
+  // Hyde Park 5
+  markerPos19 : {
+    lat: -33.874825,
+    lng: 151.211915,
+  }
 }
