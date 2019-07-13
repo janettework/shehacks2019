@@ -32,7 +32,12 @@ class Map extends Component {
 
   treeIcon = L.icon({
     iconUrl: 'tree.png',
-    iconSize: [40, 45],
+    iconSize: [40, 41],
+  })
+
+  treeHeartIcon = L.icon({
+    iconUrl: 'tree-heart.png',
+    iconSize: [40, 41],
   })
 
   blueDot = L.icon({
@@ -53,13 +58,13 @@ class Map extends Component {
             crossOrigin={true}
           />
           <Marker position={Markers.markerPos1} onClick={this.handleClick} icon={this.blueDot} />
-          <Marker position={Markers.markerPos2} onClick={this.handleClick} icon={this.treeIcon} />
-          <Marker position={Markers.markerPos3} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos2} onClick={this.handleClick} icon={this.treeHeartIcon} />
+          <Marker position={Markers.markerPos3} onClick={this.handleClick} icon={this.treeHeartIcon} />
           <Marker position={Markers.markerPos4} onClick={this.handleClick} icon={this.treeIcon} />
           <Marker position={Markers.markerPos5} onClick={this.handleClick} icon={this.treeIcon} />
           <Marker position={Markers.markerPos6} onClick={this.handleClick} icon={this.treeIcon} />
           <Marker position={Markers.markerPos7} onClick={this.handleClick} icon={this.treeIcon} />
-          <Marker position={Markers.markerPos8} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos8} onClick={this.handleClick} icon={this.treeHeartIcon} />
           <Marker position={Markers.markerPos9} onClick={this.handleClick} icon={this.treeIcon} />
           <Marker position={Markers.markerPos10} onClick={this.handleClick} icon={this.treeIcon} />
           <Marker position={Markers.markerPos11} onClick={this.handleClick} icon={this.treeIcon} />
@@ -68,7 +73,7 @@ class Map extends Component {
           <Marker position={Markers.markerPos14} onClick={this.handleClick} icon={this.treeIcon} />
           <Marker position={Markers.markerPos15} onClick={this.handleClick} icon={this.treeIcon} />
           <Marker position={Markers.markerPos16} onClick={this.handleClick} icon={this.treeIcon} />
-          <Marker position={Markers.markerPos17} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos17} onClick={this.handleClick} icon={this.treeHeartIcon} />
           <Marker position={Markers.markerPos18} onClick={this.handleClick} icon={this.treeIcon} />
           <Marker position={Markers.markerPos19} onClick={this.handleClick} icon={this.treeIcon} />
 
