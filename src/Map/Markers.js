@@ -111,5 +111,17 @@ export default {
   markerPos19 : {
     lat: -33.874825,
     lng: 151.211915,
-  }
+  },
+
+  // The Domain
+  markerPos20 : {
+    lat: -33.867467,
+    lng: 151.214951,
+  },
+
+  // Botanic Gardens
+  markerPos21: {
+    lat: -33.861471,
+    lng: 151.215895,
+  },
 }
