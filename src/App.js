@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import Map from './Map/Map'
 import Splash from "./Splash/Splash";
+import Login from "./Login/Login";
 
 export default class App extends React.Component {
   constructor(props) {
@@ -25,7 +25,7 @@ export default class App extends React.Component {
     return (
 
       <div>
-        {loading ? <Splash/> : <Map/>}
+        {loading ? <Splash/> : <Login/>}
       </div>
     )
   }
