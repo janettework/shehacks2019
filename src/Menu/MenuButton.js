@@ -13,7 +13,7 @@ export default class MenuButton extends Component {
     return (
       <Pane display="flex" flexDirection="column" className="menu-button">
         <img src={this.props.source} className="menu-button-icon" />
-        <Text marginTop={5} size={300}>{this.props.text}</Text>
+        <Text marginTop={5} size={300} color="black">{this.props.text}</Text>
       </Pane>
     );
   }

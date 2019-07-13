@@ -1,6 +1,6 @@
 import React from 'react';
 import Map from "../Map/Map";
-import { Button, Heading, TextInput } from "evergreen-ui";
+import { Button, Heading, TextInput, Pane } from "evergreen-ui";
 import "./Login.css";
 
 export default class Login extends React.Component {
@@ -32,28 +32,29 @@ export default class Login extends React.Component {
 
         {
           !loggedIn &&
-          <div className="background">
-            <div className="login">
-              <Heading size={800} marginTop="default">Sign in to make a difference</Heading>
-              <div className="inputs">
-                <TextInput
-                  className="input"
-                  name="text-input-name"
-                  placeholder="user name"
-                />
-                <TextInput
-                  className="input"
-                  type="password"
-                  name="password"
-                  placeholder="password"
-                />
-              </div>
 
-              <Button marginRight={16} onClick={this.login}>Login</Button>
+          <Pane display="flex" flexDirection="column" alignItems="center" className="login-page">
+            <Heading size={700} marginTop={120} marginBottom={50}>Log in to make a difference</Heading>
+            <Pane display="flex" flexDirection="column" alignItems="center">
+              <TextInput
+                className="input"
+                name="text-input-name"
+                placeholder="Email"
+              />
+              <TextInput
+                className="input"
+                type="password"
+                name="password"
+                placeholder="Password"
+              />
+            </Pane>
 
+            <Pane display="flex" flexDirection="row" justifyContent="center" marginTop={20}>
+              <Button intent="success" appearance="primary" height={48} onClick={this.login}>Log In</Button>
+              <img src="./background.png" className="background-img" />
+            </Pane>
 
-            </div>
-          </div>
+          </Pane>
         }
       </React.Fragment>
 

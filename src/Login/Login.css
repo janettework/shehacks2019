@@ -1,12 +1,13 @@
 
 .background {
-    background-image: url("./background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 831px;
-    background-position: center center;
 }
 
+.background-img {
+    position: absolute;
+    height: 200px;
+    bottom: 0;
+}
 
 .title {
     font-weight: 600;
