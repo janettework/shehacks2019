@@ -13,7 +13,7 @@ class Map extends Component {
       lat: -33.883006,
       lng: 151.206536,
       zoom: 15,
-      showMap: true,
+      showMap: false,
     }
   }
 

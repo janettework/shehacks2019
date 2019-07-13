@@ -7,25 +7,25 @@ export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: true,
+      loading: false,
     }
   }
 
   componentDidMount() {
 
     setTimeout(() => {
-      this.setState({loading: false})
+      this.setState({ loading: false })
     }, 3000)
   }
 
 
   render() {
-    const {loading} = this.state;
+    const { loading } = this.state;
 
     return (
 
       <div>
-        {loading ? <Splash/> : <Map/>}
+        {loading ? <Splash /> : <Map />}
       </div>
     )
   }

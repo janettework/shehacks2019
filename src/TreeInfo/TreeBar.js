@@ -7,11 +7,10 @@ export default class TreeBar extends Component {
 
 
   render() {
-    const name = "A Tree Name Goes Here"
-
     return (
-      <Pane display="flex" flexDirection="column">
-        <Button marginBottom={12} width={120}>Adopt Tree</Button>
+      <Pane display="flex" flexDirection="row" marginTop={24} marginBottom={14} justifyContent="center">
+        <Button iconBefore="add" marginLeft={12} marginRight={12}>Adopt Tree</Button>
+        <Button iconBefore="camera" marginLeft={12} marginRight={12}>Upload Photo</Button>
       </Pane>
     );
   }

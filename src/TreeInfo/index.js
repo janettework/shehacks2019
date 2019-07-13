@@ -13,14 +13,15 @@ export default class TreeInfo extends Component {
   }
 
   render() {
-    const name = "A Tree Name Goes Here"
+    const name = "Justin TIMBERlake"
 
     return (
       <Pane display="flex" padding={16} flexDirection="column">
         <Header name={name} onClose={this.props.onClose} />
         <TreeBar />
+
         <Paragraph>
-          {name} was planted in 2014 by <strong>Aga O</strong>. It is a <strong>Northern Pine Tree</strong> - species native to the Queensland area.
+          <strong>{name}</strong> was planted in 2014 by <strong>Nine</strong>. It is a Northern Pine Tree, a species native to the Sydney basin area. Northern Pine Trees are coniferous trees, and they flourish in temperate or subtropical climates.
         </Paragraph>
 
         <Actions />

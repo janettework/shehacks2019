@@ -23,7 +23,7 @@ export default class Actions extends Component {
 
   render() {
     return (
-      <Pane display="flex" flexDirection="column">
+      <Pane display="flex" flexDirection="column" marginTop={18}>
         <Heading size={500}>Actions:</Heading>
         <Checkbox checked={this.state.box1} label="Water" onChange={this.checkBox1} />
         <Checkbox checked={this.state.box2} label="Sweep leaves" onChange={this.checkBox2} />
