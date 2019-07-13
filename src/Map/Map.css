@@ -2,3 +2,7 @@
     height: -webkit-fill-available;
     width: 100%;
 }
+
+.leaflet-control-container > div.leaflet-control-geosearch.bar {
+    width: 70%;
+}
