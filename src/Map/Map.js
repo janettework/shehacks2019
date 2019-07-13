@@ -35,6 +35,11 @@ class Map extends Component {
     iconSize: [30, 55],
   })
 
+  blueDot = L.icon({
+    iconUrl: 'bluedot.gif',
+    iconSize: [25, 25],
+  })
+
   render() {
     const position = [this.state.lat, this.state.lng];
     return (
@@ -47,7 +52,7 @@ class Map extends Component {
             url='https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png'
             crossOrigin={true}
           />
-          <Marker position={Markers.markerPos1} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos1} onClick={this.handleClick} icon={this.blueDot} />
           <Marker position={Markers.markerPos2} onClick={this.handleClick} icon={this.treeIcon} />
           <Marker position={Markers.markerPos3} onClick={this.handleClick} icon={this.treeIcon} />
           <Marker position={Markers.markerPos4} onClick={this.handleClick} icon={this.treeIcon} />
