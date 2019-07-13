@@ -35,7 +35,7 @@ export default class Login extends React.Component {
           !loggedIn &&
           <div className="background">
             <div className="login">
-              <div>Sign in to make a difference</div>
+              <div className="title">Sign in to make a difference</div>
               <div className="inputs">
                 <TextInput
                   className="input"
