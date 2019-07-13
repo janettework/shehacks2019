@@ -1,13 +1,13 @@
 import React from 'react';
 import './App.css';
-import Map from './Map/Map'
 import Splash from "./Splash/Splash";
+import Login from "./Login/Login";
 
 export default class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      loading: false,
+      loading: true,
     }
   }
 
@@ -24,9 +24,9 @@ export default class App extends React.Component {
 
     return (
 
-      <div>
-        {loading ? <Splash /> : <Map />}
-      </div>
+      <React.Fragment>
+        {loading ? <Splash /> : <Login />}
+      </React.Fragment>
     )
   }
 }
