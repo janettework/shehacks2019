@@ -24,9 +24,9 @@ export default class App extends React.Component {
 
     return (
 
-      <div>
+      <React.Fragment>
         {loading ? <Splash/> : <Login/>}
-      </div>
+      </React.Fragment>
     )
   }
 }

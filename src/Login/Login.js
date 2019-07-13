@@ -1,6 +1,7 @@
 import React from 'react';
 import Map from "../Map/Map";
 import {Button, TextInput} from "evergreen-ui";
+import "./Login.css";
 
 export default class Login extends React.Component {
   constructor(props) {
@@ -22,7 +23,8 @@ export default class Login extends React.Component {
 
     return (
 
-      <div>
+      <React.Fragment>
+
         {
 
           loggedIn && <Map/>
@@ -31,24 +33,31 @@ export default class Login extends React.Component {
         {
 
           !loggedIn &&
-          <div className="login">
-            <div>Welcome back</div>
+          <div className="background">
+            <div className="login">
+              <div>Sign in to make a difference</div>
+              <div className="inputs">
+                <TextInput
+                  className="input"
+                  name="text-input-name"
+                  placeholder="user name"
+                />
+                <TextInput
+                  className="input"
+                  type="password"
+                  name="password"
+                  placeholder="password"
+                />
+              </div>
 
-            <div>
-              <TextInput
-                name="text-input-name"
-                placeholder="user name"
-              />
-              <TextInput
-                type="password"
-                name="password"
-              />
+              <Button marginRight={16} onClick={this.login}>Login</Button>
+
+
             </div>
-
-            <Button marginRight={16} onClick={this.login}>Login</Button>
           </div>
         }
-      </div>
+      </React.Fragment>
+
     )
   }
 }

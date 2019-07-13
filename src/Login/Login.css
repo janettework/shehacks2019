@@ -1,0 +1,23 @@
+
+.background {
+    background-image: url("./background.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 831px;
+    background-position: center center;
+    opacity: 0.6;
+}
+
+.login {
+    padding: 17%;
+    text-align: center;
+
+}
+
+.inputs {
+    margin-top: 1em;
+}
+
+.input {
+    margin-bottom: 1em;
+}
