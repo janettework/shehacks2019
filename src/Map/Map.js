@@ -1,10 +1,10 @@
-import React, { Component } from 'react'
 import L from 'leaflet'
-import { Map as LeafletMap, TileLayer, Marker, withLeaflet } from 'react-leaflet'
+import React, { Component } from 'react'
+import { Map as LeafletMap, TileLayer, Marker } from 'react-leaflet'
 import Markers from './Markers'
+import './Map.css';
 import Search from './Search'
 import TreeInfo from '../TreeInfo'
-import './Map.css';
 
 class Map extends Component {
   constructor() {
@@ -14,7 +14,7 @@ class Map extends Component {
       lat: -33.883006,
       lng: 151.206536,
       zoom: 15,
-      showMap: false,
+      showMap: true,
     }
   }
 
