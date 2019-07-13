@@ -53,6 +53,11 @@ class Map extends Component {
         <Marker position={Markers.markerPos9} onClick={this.handleClick} icon={this.treeIcon} />
         <Marker position={Markers.markerPos10} onClick={this.handleClick} icon={this.treeIcon} />
         <Marker position={Markers.markerPos11} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos12} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos13} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos14} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos15} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos16} onClick={this.handleClick} icon={this.treeIcon} />
       </LeafletMap> : <TreeInfo onClose={this.handleClose} />
     );
   }

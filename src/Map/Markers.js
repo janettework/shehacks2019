@@ -64,4 +64,34 @@ export default {
     lat: -33.878736,
     lng: 151.194144,
   },
+
+  // Surry Hils
+  markerPos12 : {
+    lat: -33.879640,
+    lng: 151.211825,
+  },
+
+  // Surry Hills
+  markerPos13 : {
+    lat: -33.885585,
+    lng: 151.214078,
+  },
+
+  // Redfern Park
+  markerPos14 : {
+    lat: -33.893618,
+    lng: 151.206664,
+  },
+
+  // Chippendale
+  markerPos15 : {
+    lat: -33.885736,
+    lng: 151.200055,
+  },
+
+  // Darling Quarter
+  markerPos16 : {
+    lat: -33.875430,
+    lng: 151.201578,
+  },
 }
