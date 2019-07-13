@@ -21,9 +21,8 @@ class Map extends Component {
   }
 
   treeIcon = L.icon({
-    iconUrl: 'treeicon.png',
-    iconSize: [50, 50],
-    shadowSize: [50, 50],
+    iconUrl: 'tree.png',
+    iconSize: [30, 55],
   })
 
   render() {
@@ -32,7 +31,8 @@ class Map extends Component {
       <LeafletMap center={position} zoom={this.state.zoom}>
         <TileLayer
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
+          url='https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png'
+          crossOrigin={true}
         />
         <Marker position={Markers.markerPos1} onClick={this.handleClick} icon={this.treeIcon} />
         <Marker position={Markers.markerPos2} onClick={this.handleClick} icon={this.treeIcon} />
