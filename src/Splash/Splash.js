@@ -27,6 +27,8 @@ export default class Splash extends React.Component {
 
     return (
       <div className="splash-content">
+        <img src="./app-logo.png" className="app-logo" />
+
         <div className="facts bounce">
           <Heading size={800}>{fact}</Heading>
 
