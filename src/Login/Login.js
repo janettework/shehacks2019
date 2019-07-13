@@ -1,6 +1,6 @@
 import React from 'react';
 import Map from "../Map/Map";
-import {Button, TextInput} from "evergreen-ui";
+import {Button, Heading, TextInput} from "evergreen-ui";
 import "./Login.css";
 
 export default class Login extends React.Component {
@@ -35,7 +35,7 @@ export default class Login extends React.Component {
           !loggedIn &&
           <div className="background">
             <div className="login">
-              <div className="title">Sign in to make a difference</div>
+              <Heading size={800} marginTop="default">Sign in to make a difference</Heading>
               <div className="inputs">
                 <TextInput
                   className="input"
