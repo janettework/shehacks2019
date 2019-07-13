@@ -1,0 +1,17 @@
+.menu {
+    position: absolute;
+    z-index: 9999;
+    bottom: 0;
+    
+
+    background-color: #C2D796;
+}
+
+.menu-button {
+    height: 65px
+}
+
+.menu-button-icon {
+    height: 40px;
+    object-fit: contain;
+}

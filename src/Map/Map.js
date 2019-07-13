@@ -2,9 +2,13 @@ import L from 'leaflet'
 import React, { Component } from 'react'
 import { Map as LeafletMap, TileLayer, Marker } from 'react-leaflet'
 import Markers from './Markers'
+import TreeInfo from '../TreeInfo'
+import Menu from '../Menu'
 import './Map.css';
 import Search from './Search'
-import TreeInfo from '../TreeInfo'
+
+
+import { Pane } from 'evergreen-ui'
 
 class Map extends Component {
   constructor() {
@@ -19,9 +23,6 @@ class Map extends Component {
   }
 
   handleClick = event => {
-    const { lat, lng } = event.latlng
-    console.log(`Clicked at ${lat}, ${lng}`)
-
     this.setState({ showMap: false })
   }
 
@@ -37,33 +38,38 @@ class Map extends Component {
   render() {
     const position = [this.state.lat, this.state.lng];
     return (
-      this.state.showMap ? <LeafletMap center={position} zoom={this.state.zoom}>
-        <Search />
-        <TileLayer
-          attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-          url='https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png'
-          crossOrigin={true}
-        />
-        <Marker position={Markers.markerPos1} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos2} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos3} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos4} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos5} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos6} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos7} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos8} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos9} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos10} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos11} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos12} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos13} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos14} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos15} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos16} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos17} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos18} onClick={this.handleClick} icon={this.treeIcon} />
-        <Marker position={Markers.markerPos19} onClick={this.handleClick} icon={this.treeIcon} />
-      </LeafletMap> : <TreeInfo onClose={this.handleClose} />
+      <Pane>
+        <Menu />
+        {this.state.showMap ? <LeafletMap center={position} zoom={this.state.zoom}>
+          <Search />
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url='https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png'
+            crossOrigin={true}
+          />
+          <Marker position={Markers.markerPos1} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos2} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos3} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos4} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos5} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos6} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos7} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos8} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos9} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos10} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos11} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos12} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos13} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos14} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos15} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos16} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos17} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos18} onClick={this.handleClick} icon={this.treeIcon} />
+          <Marker position={Markers.markerPos19} onClick={this.handleClick} icon={this.treeIcon} />
+
+        </LeafletMap> : <TreeInfo onClose={this.handleClose} />}
+
+      </Pane>
     );
   }
 }

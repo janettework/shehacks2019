@@ -18,7 +18,7 @@ export default class Header extends Component {
           <Button marginBottom={12} iconBefore="arrow-left" width={80} onClick={this.props.onClose}>Back</Button>
         </Pane>
 
-        <Pane display="flex" flexDirection="column" alignItems="center" marginVertical={20} >
+        <Pane display="flex" flexDirection="column" alignItems="center" marginTop={20} marginBottom={20} >
           <Heading size={900} marginBottom={14}>{this.props.name}</Heading>
           <img src="./baby-tree.jpeg" alt="baby tree" className="tree-img" />
           <Sponsor />

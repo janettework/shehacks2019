@@ -1,6 +1,6 @@
 import React from 'react';
 import Map from "../Map/Map";
-import {Button, Heading, TextInput} from "evergreen-ui";
+import { Button, Heading, TextInput } from "evergreen-ui";
 import "./Login.css";
 
 export default class Login extends React.Component {
@@ -12,7 +12,7 @@ export default class Login extends React.Component {
   }
 
   login = () => {
-    this.setState({loggedIn: true})
+    this.setState({ loggedIn: true })
   }
 
   render() {
@@ -27,11 +27,10 @@ export default class Login extends React.Component {
 
         {
 
-          loggedIn && <Map/>
+          loggedIn && <Map />
         }
 
         {
-
           !loggedIn &&
           <div className="background">
             <div className="login">
