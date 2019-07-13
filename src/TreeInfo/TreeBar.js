@@ -8,8 +8,8 @@ export default class TreeBar extends Component {
 
   render() {
     return (
-      <Pane display="flex" flexDirection="row" marginTop={24} marginBottom={14} justifyContent="center">
-        <Button iconBefore="add" marginLeft={12} marginRight={12}>Fave Tree</Button>
+      <Pane display="flex" flexDirection="row" marginTop={20} marginBottom={16} justifyContent="center">
+        <Button iconBefore="heart" marginLeft={12} marginRight={12}>Fave Tree</Button>
         <Button iconBefore="camera" marginLeft={12} marginRight={12}>Upload Photo</Button>
       </Pane>
     );
