@@ -2,16 +2,12 @@
     position: absolute;
     z-index: 9999;
     bottom: 0;
-    
-
-    background-color: #C2D796;
+    background-color: #8cdaa3;
+    height: 65px;
 }
 
-.menu-button {
-    height: 65px
-}
 
 .menu-button-icon {
-    height: 40px;
+    height: 35px;
     object-fit: contain;
 }

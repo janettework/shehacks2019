@@ -39,7 +39,7 @@ class Map extends Component {
     const position = [this.state.lat, this.state.lng];
     return (
       <Pane>
-        <Menu />
+        <Menu active={this.state.showMap} />
         {this.state.showMap ? <LeafletMap center={position} zoom={this.state.zoom}>
           <Search />
           <TileLayer
