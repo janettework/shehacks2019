@@ -32,7 +32,7 @@ class Map extends Component {
 
   treeIcon = L.icon({
     iconUrl: 'tree.png',
-    iconSize: [30, 55],
+    iconSize: [40, 45],
   })
 
   blueDot = L.icon({
