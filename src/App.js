@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Map from './Map'
+import Map from './Map/Map'
 import Splash from "./Splash/Splash";
 
 export default class App extends React.Component {
