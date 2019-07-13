@@ -1,14 +1,10 @@
 import React, { Component } from 'react'
+import L from 'leaflet'
 import { Map as LeafletMap, TileLayer, Marker } from 'react-leaflet'
 import Markers from './Markers'
 import './Map.css';
 
 class Map extends Component {
-  handleClick = event => {
-    const { lat, lng } = event.latlng
-    console.log(`Clicked at ${lat}, ${lng}`)
-  }
-
   constructor() {
     super()
     // Central Station
@@ -19,6 +15,17 @@ class Map extends Component {
     }
   }
 
+  handleClick = event => {
+    const { lat, lng } = event.latlng
+    console.log(`Clicked at ${lat}, ${lng}`)
+  }
+
+  treeIcon = L.icon({
+    iconUrl: 'treeicon.png',
+    iconSize: [50, 50],
+    shadowSize: [50, 50],
+  })
+
   render() {
     const position = [this.state.lat, this.state.lng];
     return (
@@ -27,17 +34,17 @@ class Map extends Component {
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
           url='https://{s}.tile.osm.org/{z}/{x}/{y}.png'
         />
-        <Marker position={Markers.markerPos1} onClick={this.handleClick} />
-        <Marker position={Markers.markerPos2} onClick={this.handleClick} />
-        <Marker position={Markers.markerPos3} onClick={this.handleClick} />
-        <Marker position={Markers.markerPos4} onClick={this.handleClick} />
-        <Marker position={Markers.markerPos5} onClick={this.handleClick} />
-        <Marker position={Markers.markerPos6} onClick={this.handleClick} />
-        <Marker position={Markers.markerPos7} onClick={this.handleClick} />
-        <Marker position={Markers.markerPos8} onClick={this.handleClick} />
-        <Marker position={Markers.markerPos9} onClick={this.handleClick} />
-        <Marker position={Markers.markerPos10} onClick={this.handleClick} />
-        <Marker position={Markers.markerPos11} onClick={this.handleClick} />
+        <Marker position={Markers.markerPos1} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos2} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos3} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos4} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos5} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos6} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos7} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos8} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos9} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos10} onClick={this.handleClick} icon={this.treeIcon} />
+        <Marker position={Markers.markerPos11} onClick={this.handleClick} icon={this.treeIcon} />
       </LeafletMap>
     );
   }
